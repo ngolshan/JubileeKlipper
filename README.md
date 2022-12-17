@@ -1,14 +1,12 @@
 # JubileeKlipper
-Klipper configuration for Jubilee3d toolchanger using Duet2 &amp; Duex5 hardware.
+Klipper configuration for the Jubilee3d toolchanger using a BigTreeTech Octopus Pro board and the Filastruder/LDO Jubilee kit. 
 
-The base toolchanging macros are inspired by [SteveJWallace's config](https://github.com/SteveJWallace/JubileeKlipper). They have been extended to make the Tx commands more modular, and make specific tool/extruder configuration more maintainable.
+The base toolchanging macros are inspired by [SteveJWallace's config](https://github.com/SteveJWallace/JubileeKlipper). They have been extended by [Xonman](https://github.com/Xonman/JubileeKlipper) to make the Tx commands more modular, and make specific tool/extruder configuration more maintainable.
 
 The exact Jubilee3d setup this config is maintained for is:
 - Standard LDO motors (42STH48-2504AC for X/Y, 3x 42STH47-1684MAC for Z)
-- X/Y plugged into X/Y, REL geared stepper plugged into Z, ZZZ plugged into E2/3/5
-- 2x extruders plugged into E0/1, 2x extruders using CAN toolboards (1x Mellow SHT-36, 1x Huvud 0.61)
-- Thermostatic fans on all extruders using Fan0/1/3 and an MCU fan on Fan2 limited to 40%
-- One part fan (a berd-air setup) is used for all tools except `crew-white` which uses it's own fan
+- X,Y,Z,Z,Z,REL plugged into Motor0 through Motor5, in that order
+- 2x Baby Bullet toolheads using 42mm toolboards connected via USB (not CAN!) (2x BTT EBB42)
 
 ## Tool posts
 The philosophy of this config is to separate tool post and extruder. This is intended to allow for swapping tools in and out from each physical tool location without requiring huge rework.
