@@ -2,3 +2,7 @@ moonraker.conf
 .moonraker.conf.bkp
 webcam.txt
 printer-*
+sonar.conf
+crowsnest.conf
+mainsail.cfg
+timelapse.cfg
